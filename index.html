@@ -3,33 +3,53 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets/css/form.css" rel="stylesheet" type="text/css">
 		<title>formulaire de renseignement</title>
 	</head>
 		
 	<body>
-		<mean>
+		<main id="principal">	
 			<h1>formulaire de renseignements</h1>
 			<form method="post" action="#">
-				<fieldset>
+				<fieldset id="section1">
 					<!--civilite-->
-					<legend>Civilité</legend>
+					<legend>Civilité : </legend>
 						<label for="nom">Nom : </label>
 						<input type="text" required id="nom" name="nom">
 						<label for="prenom">Prenom : </label>
-						<input type="text" required id="prenom" name="prenom"><br><br>
+						<input type="text" required id="prenom" name="prenom"><br>
 						<label for="adress">Adresse : </label>
 						<input type="text" id="adress" name="adress" required>
 						<label for="email">Email : </label>
-						<input type="email" required id="email" name="email"><br><br>
+						<input type="email" required id="email" name="email"><br>
 						<label for="mdp">Mot de Passe : </label>
-						<input type="password" checked id="mdp" name="mdp"><br><br>
-						<label>Sexe : </label>
-						<input type="radio" value="homme" name="sexe"><label>H</label>
-						<input type="radio" value="femme" name="sexe"><label>F</label>
+						<input type="password" checked id="mdp" name="mdp"><br>
+						<label>choisissez votre pays :</label>
+						<select name="pays">
+							<optgroup label="Afrique">
+								<option>gabon</option>
+								<option>senegal</option>
+								<option>bénin</option>
+								<option>togo</option>
+							</optgroup>
+							<optgroup label="Europe">
+								<option>canada</option>
+								<option>france</option>
+								<option>italie</option>
+							</optgroup>
+						</select>
 				</fieldset>
-				<fieldset>
+				<fieldset id="section2">
+					<legend>informations supplémentaires : </legend>
+					<label>Sexe : </label>
+						<input type="radio" value="homme" name="sexe">
+						<label>Homme</label>
+						<input type="radio" value="femme" name="sexe">
+						<label>Femme</label><br>
+				</fieldset>
+				<fieldset id="section3">
 					<!--formation-->
-					<legend>Formation</legend>
+					<legend>Formation : </legend>
 						<label>Dernier Diplôme : </label>
 						<select name="diplome">
 							<option value="aucun">Aucun</option>
@@ -38,21 +58,20 @@
 							<option selected value="bac3">bac3</option>
 						</select><br><br>
 						<label>centre d'interet :</label>
-						<input type="checkbox" id="mus" value="musique" name="cd" checked>
-						<label for="mus">Musique </label>
+<label for="mus">Musique </label>
 						<input type="checkbox" id="spor" value="sport" name="cd">
 						<label for="spor">Sport</label>
 						<input type="checkbox" id="lect" value="lecture" name="cd">
 						<label for="lect">Lecture</label>
 				</fieldset>
-				<fieldset>
+				<fieldset id="section4">
 					<!--commentaire-->
-					<legend>Commentaire</legend>
+					<legend>Commentaire : </legend>
 					<textarea></textarea><br>
 					<input type="checkbox" value="ok" name="val"> <label> J'accepte les conditions </label>
 				</fieldset><br>
 				<input type="submit" value="envoyez">
 			</form>
-		</mean>
+		</main>
 	</body>
 </html>
